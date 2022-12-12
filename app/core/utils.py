@@ -31,3 +31,5 @@ def get_filepath_and_extension(filepath):
         if os.path.exists(source + ".webp"):
             formats.append(".webp")
     return {"path": source, "formats": formats}
+
+
