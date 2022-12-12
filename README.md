@@ -29,6 +29,9 @@ Once your project is set up, your are allowed to use `api/v1/` Routes. These inc
 When requesting to `LIST Routes`, you can put `_filter` object in the body of your request and write `Django ORM` filter queries as values. This is an example of body:
 
 ```
+GET {{host}}/api/v1/items/
+
+BODY:
 {
     "_filter": {
         "title__startswith": "Test"
