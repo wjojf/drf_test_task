@@ -1,4 +1,1 @@
-{
-    'status_id':1,
-    "status_description": :'Avaliable',
-}
+# Welcome to drf_test_task!
