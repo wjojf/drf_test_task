@@ -26,7 +26,7 @@ Once your project is set up, your are allowed to use `api/v1/` Routes. These inc
 
 # API Filters 
 
-When using list router,you can put `_filter` object in the body of your request and write `Django ORM` filter queries as values. This is an example of body:
+When requesting to `LIST Routes`, you can put `_filter` object in the body of your request and write `Django ORM` filter queries as values. This is an example of body:
 
 ```
 {
