@@ -51,18 +51,18 @@ def file_cleanup(sender, **kwargs):
         except:
             field = None
 
-    if field and (isinstance(field, FileField) or isinstance(field, ImageField)):
-        inst = kwargs["instance"]
-        f = getattr(inst, fieldname)
-        m = inst.__class__._default_manager
-        if (
-            hasattr(f, "path")
-            and os.path.exists(f.path)
-            and not m.filter(
-                **{"%s__exact" % fieldname: getattr(inst, fieldname)}
-            ).exclude(pk=inst._get_pk_val())
-        ):
-            try:
-                default_storage.delete(f.path)
-            except:
-                pass
+        if field and (isinstance(field, FileField) or isinstance(field, ImageField)):
+            inst = kwargs["instance"]
+            f = getattr(inst, fieldname)
+            m = inst.__class__._default_manager
+            if (
+                hasattr(f, "path")
+                and os.path.exists(f.path)
+                and not m.filter(
+                    **{"%s__exact" % fieldname: getattr(inst, fieldname)}
+                ).exclude(pk=inst._get_pk_val())
+            ):
+                try:
+                    default_storage.delete(f.path)
+                except:
+                    pass
