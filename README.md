@@ -13,6 +13,10 @@
 
 3) `docker compose up --build` in your terminal
 
+4) `localhost:8000` in your browser
+
+Once set up, an admin user with `username=admin` and `password=12345` is automatically created.
+
 # API Routes 
 
 Once your project is set up, your are allowed to use `api/v1/` Routes. These include:
